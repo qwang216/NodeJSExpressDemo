@@ -12,7 +12,7 @@ app.set('views', './src/views');
 //var handlebars = require('express-handlebars');
 //app.engine('.hbs', handlebars({extname: '.hbs'}));
 app.set('view engine', 'ejs');
-app.use('/Books', bookRouter);
+app.use('/books', bookRouter);
 
 app.get('/', function (req, res) {
     res.render('index', {
@@ -27,9 +27,9 @@ app.get('/', function (req, res) {
     });
 });
 
-app.get('/books', function (req, res) {
-    res.send('Hello Books');
-});
+//app.get('/books', function (req, res) {
+//    res.send('Hello Books');
+//});
 
 app.listen(port, function (err) {
     console.log('running server on port ' + port);

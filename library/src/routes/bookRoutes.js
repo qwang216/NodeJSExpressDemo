@@ -68,11 +68,11 @@ bookRouter.route('/')
         });
     });
 
-bookRouter.route('/:id')
+bookRouter.route('/:bookNum')
     .get(function (req, res) {
-        var id = req.param.id;
+        var id = req.params.bookNum;
         res.render('bookView', {
-            title: 'Books',
+            title: 'Book',
             nav: [{
                 Link: '/Books',
                 Text: 'Books'
