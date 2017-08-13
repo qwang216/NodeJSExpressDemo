@@ -1,12 +1,10 @@
 {
   "name": "library",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.0",
   "authors": [
-    "Jason wang <qwang216@gmail.com>"
+    "Jonathan Mills <jonathanfmills@gmail.com>"
   ],
-  "license": "ISC",
-  "homepage": "",
+  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -15,7 +13,23 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.3.7",
-    "font-awesome": "~4.7.0"
-  }
+    "bootstrap": "~3.3.5",
+    "font-awesome": "~4.4.0"
+  },
+    "overrides": {
+        "bootstrap": {
+            "main": [
+                "dist/js/bootstrap.js",
+                "dist/css/bootstrap.css",
+                "less/bootstrap.less"
+            ]
+        },
+        "font-awesome": {
+            "main": [
+                "less/font-awesome.less",
+                "css/font-awesome.min.css",
+                "scss/font-awesome.scss"
+            ]
+        }
+    }
 }
